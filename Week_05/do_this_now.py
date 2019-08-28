@@ -8,8 +8,8 @@ def find_oldest_name(names, ages):
     if not ages:
         return None
     index_of_oldest = 0
-    age_of_oldest = -1
-    for i, age in enumerate(ages):
+    age_of_oldest = ages[0]
+    for i, age in enumerate(ages[1:], 1):
         if age > age_of_oldest:
             index_of_oldest = i
             age_of_oldest = age
